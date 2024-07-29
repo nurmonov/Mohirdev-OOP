@@ -1,0 +1,52 @@
+package Mashq3;
+
+public class MathFunctions {
+    double a;
+    double b;
+    double c;
+    double R;
+
+    static double Pi;
+    static double E;
+
+    public MathFunctions(double a, double b, double c, double r) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        R = r;
+    }
+
+    public MathFunctions() {
+    }
+
+
+
+    public void trianglyYuza(double a, double b, double c){
+        double p=(a+b+c)/2;
+        double s=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        System.out.println(s);
+    }
+    public void aylanaYuzi(int R){
+         this.Pi=Math.PI;
+        double s=Pi*R*R;
+        System.out.println(s);
+    }
+    public void hisoblawE(int a){
+         this.E=Math.E;
+        double s=Math.pow(E,a);
+        System.out.println(s);
+    }
+
+    public static class Main {
+        public static void main(String[] args) {
+
+
+            MathFunctions mathFunctions = new MathFunctions();
+           mathFunctions.trianglyYuza(3,4,5);
+           mathFunctions.aylanaYuzi(5);
+           mathFunctions.hisoblawE(2);
+
+
+        }
+    }
+}
